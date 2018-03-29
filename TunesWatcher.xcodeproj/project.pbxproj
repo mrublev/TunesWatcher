@@ -12,6 +12,7 @@
 		0332E550206CE1A200998B97 /* EnterAppstoreIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */; };
 		0332E552206CEF1000998B97 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E551206CEF1000998B97 /* RecordsViewController.swift */; };
 		0332E554206CF3B900998B97 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E553206CF3B900998B97 /* CommentsViewController.swift */; };
+		0332E557206CFF8F00998B97 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E556206CFF8F00998B97 /* CommentTableViewCell.swift */; };
 		03B9ABE6206CCA150077DE8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9ABE5206CCA150077DE8C /* AppDelegate.swift */; };
 		03B9ABED206CCA150077DE8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9ABEB206CCA150077DE8C /* Main.storyboard */; };
 		03B9ABEF206CCA150077DE8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B9ABEE206CCA150077DE8C /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAppstoreIDViewController.swift; sourceTree = "<group>"; };
 		0332E551206CEF1000998B97 /* RecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		0332E553206CF3B900998B97 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		0332E556206CFF8F00998B97 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		03B9ABE2206CCA150077DE8C /* TunesWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunesWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B9ABE5206CCA150077DE8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B9ABEC206CCA150077DE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0332E555206CFF6600998B97 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0332E556206CFF8F00998B97 /* CommentTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		03B9ABD9206CCA150077DE8C = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 			children = (
 				0332E549206CCF3800998B97 /* Models */,
 				0332E54E206CE14800998B97 /* Controllers */,
+				0332E555206CFF6600998B97 /* Cells */,
 				03B9ABE5206CCA150077DE8C /* AppDelegate.swift */,
 				03B9ABEB206CCA150077DE8C /* Main.storyboard */,
 				03B9ABEE206CCA150077DE8C /* Assets.xcassets */,
@@ -253,6 +264,7 @@
 				0332E552206CEF1000998B97 /* RecordsViewController.swift in Sources */,
 				0332E54B206CD05900998B97 /* FeedComment.swift in Sources */,
 				0332E554206CF3B900998B97 /* CommentsViewController.swift in Sources */,
+				0332E557206CFF8F00998B97 /* CommentTableViewCell.swift in Sources */,
 				0332E550206CE1A200998B97 /* EnterAppstoreIDViewController.swift in Sources */,
 				03B9ABE6206CCA150077DE8C /* AppDelegate.swift in Sources */,
 			);

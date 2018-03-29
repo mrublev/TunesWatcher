@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0332E54B206CD05900998B97 /* FeedComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54A206CD05900998B97 /* FeedComment.swift */; };
+		0332E54D206CD17A00998B97 /* AppIdEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54C206CD17A00998B97 /* AppIdEntry.swift */; };
+		0332E550206CE1A200998B97 /* EnterAppstoreIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */; };
+		0332E552206CEF1000998B97 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E551206CEF1000998B97 /* RecordsViewController.swift */; };
+		0332E554206CF3B900998B97 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E553206CF3B900998B97 /* CommentsViewController.swift */; };
 		03B9ABE6206CCA150077DE8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9ABE5206CCA150077DE8C /* AppDelegate.swift */; };
-		03B9ABE8206CCA150077DE8C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9ABE7206CCA150077DE8C /* MasterViewController.swift */; };
-		03B9ABEA206CCA150077DE8C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9ABE9206CCA150077DE8C /* DetailViewController.swift */; };
 		03B9ABED206CCA150077DE8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9ABEB206CCA150077DE8C /* Main.storyboard */; };
 		03B9ABEF206CCA150077DE8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B9ABEE206CCA150077DE8C /* Assets.xcassets */; };
 		03B9ABF2206CCA150077DE8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9ABF0206CCA150077DE8C /* LaunchScreen.storyboard */; };
+		BFE63733D20231745EA1AEA6 /* Pods_TunesWatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B35981866B6AAD9D746EAA /* Pods_TunesWatcher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0332E54A206CD05900998B97 /* FeedComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedComment.swift; sourceTree = "<group>"; };
+		0332E54C206CD17A00998B97 /* AppIdEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIdEntry.swift; sourceTree = "<group>"; };
+		0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAppstoreIDViewController.swift; sourceTree = "<group>"; };
+		0332E551206CEF1000998B97 /* RecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		0332E553206CF3B900998B97 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		03B9ABE2206CCA150077DE8C /* TunesWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunesWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B9ABE5206CCA150077DE8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03B9ABE7206CCA150077DE8C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		03B9ABE9206CCA150077DE8C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		03B9ABEC206CCA150077DE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03B9ABEE206CCA150077DE8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03B9ABF1206CCA150077DE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03B9ABF3206CCA150077DE8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B35981866B6AAD9D746EAA /* Pods_TunesWatcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TunesWatcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CAA1C98DA3812AD9F2D86AC /* Pods-TunesWatcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TunesWatcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-TunesWatcher/Pods-TunesWatcher.release.xcconfig"; sourceTree = "<group>"; };
+		F9E8233E74E03A332B6761A6 /* Pods-TunesWatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TunesWatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TunesWatcher/Pods-TunesWatcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE63733D20231745EA1AEA6 /* Pods_TunesWatcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0332E549206CCF3800998B97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0332E54A206CD05900998B97 /* FeedComment.swift */,
+				0332E54C206CD17A00998B97 /* AppIdEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0332E54E206CE14800998B97 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */,
+				0332E551206CEF1000998B97 /* RecordsViewController.swift */,
+				0332E553206CF3B900998B97 /* CommentsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		03B9ABD9206CCA150077DE8C = {
 			isa = PBXGroup;
 			children = (
 				03B9ABE4206CCA150077DE8C /* TunesWatcher */,
 				03B9ABE3206CCA150077DE8C /* Products */,
+				40F168914BE9F3E3BA0F9BEC /* Pods */,
+				58BBC9227B7156CD9866ECF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +88,32 @@
 		03B9ABE4206CCA150077DE8C /* TunesWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				0332E549206CCF3800998B97 /* Models */,
+				0332E54E206CE14800998B97 /* Controllers */,
 				03B9ABE5206CCA150077DE8C /* AppDelegate.swift */,
-				03B9ABE7206CCA150077DE8C /* MasterViewController.swift */,
-				03B9ABE9206CCA150077DE8C /* DetailViewController.swift */,
 				03B9ABEB206CCA150077DE8C /* Main.storyboard */,
 				03B9ABEE206CCA150077DE8C /* Assets.xcassets */,
 				03B9ABF0206CCA150077DE8C /* LaunchScreen.storyboard */,
 				03B9ABF3206CCA150077DE8C /* Info.plist */,
 			);
 			path = TunesWatcher;
+			sourceTree = "<group>";
+		};
+		40F168914BE9F3E3BA0F9BEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9E8233E74E03A332B6761A6 /* Pods-TunesWatcher.debug.xcconfig */,
+				0CAA1C98DA3812AD9F2D86AC /* Pods-TunesWatcher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		58BBC9227B7156CD9866ECF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08B35981866B6AAD9D746EAA /* Pods_TunesWatcher.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03B9ABF6206CCA150077DE8C /* Build configuration list for PBXNativeTarget "TunesWatcher" */;
 			buildPhases = (
+				876B5CA1400C6982A106A632 /* [CP] Check Pods Manifest.lock */,
 				03B9ABDE206CCA150077DE8C /* Sources */,
 				03B9ABDF206CCA150077DE8C /* Frameworks */,
 				03B9ABE0206CCA150077DE8C /* Resources */,
+				1959BF98C0500207D9C0D26F /* [CP] Embed Pods Frameworks */,
+				7438E07B0C2714303218CE17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,13 +186,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1959BF98C0500207D9C0D26F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TunesWatcher/Pods-TunesWatcher-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TunesWatcher/Pods-TunesWatcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7438E07B0C2714303218CE17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TunesWatcher/Pods-TunesWatcher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		876B5CA1400C6982A106A632 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TunesWatcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03B9ABDE206CCA150077DE8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03B9ABEA206CCA150077DE8C /* DetailViewController.swift in Sources */,
-				03B9ABE8206CCA150077DE8C /* MasterViewController.swift in Sources */,
+				0332E54D206CD17A00998B97 /* AppIdEntry.swift in Sources */,
+				0332E552206CEF1000998B97 /* RecordsViewController.swift in Sources */,
+				0332E54B206CD05900998B97 /* FeedComment.swift in Sources */,
+				0332E554206CF3B900998B97 /* CommentsViewController.swift in Sources */,
+				0332E550206CE1A200998B97 /* EnterAppstoreIDViewController.swift in Sources */,
 				03B9ABE6206CCA150077DE8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +389,7 @@
 		};
 		03B9ABF7206CCA150077DE8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E8233E74E03A332B6761A6 /* Pods-TunesWatcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +405,7 @@
 		};
 		03B9ABF8206CCA150077DE8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CAA1C98DA3812AD9F2D86AC /* Pods-TunesWatcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
 
-class DetailViewController: UIViewController {
+class CommentsViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    
+    var appIdEntry: AppIdEntry? {
+        didSet {
+            configureView()
+        }
+    }
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = detailItem {
+        if let appEntry = appIdEntry {
             if let label = detailDescriptionLabel {
-                label.text = detail.description
+                label.text = appEntry.applicationId
             }
         }
     }
@@ -31,13 +37,6 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
     }
 
 

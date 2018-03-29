@@ -12,23 +12,25 @@ import Alamofire
 
 class CommentsViewController: UITableViewController {
     
-    let URLTemplate = "https://itunes.apple.com/ru/rss/customerreviews/id=<APP_ID>/sortBy=mostRecent/json"
+    let URLTemplate = "https://itunes.apple.com/<REGION>/rss/customerreviews/id=<APP_ID>/sortBy=mostRecent/json"
     var requestURL: URL?
     var objects: [FeedComment]?
     
-    var appIdEntry: AppIdEntry? {
-        didSet {
-            if let id = appIdEntry?.applicationId {
-                let requestString: String = URLTemplate.replacingOccurrences(of: "<APP_ID>", with: id)
-                requestURL = URL.init(string: requestString)
-            }
+    var appIdEntry: AppIdEntry?
+    var regionShort: String?
+    
+    func getApplicationURL() -> URL? {
+        if let region = regionShort, let id = appIdEntry?.applicationId {
+            let requestString: String = URLTemplate.replacingOccurrences(of: "<APP_ID>", with: id).replacingOccurrences(of: "<REGION>", with: region)
+            return URL.init(string: requestString)
         }
+        return nil
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let url = requestURL {
+        if let url = getApplicationURL() {
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
             
             Alamofire.request(url).responseJSON { response in

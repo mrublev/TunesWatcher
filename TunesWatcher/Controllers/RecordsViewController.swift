@@ -11,7 +11,7 @@ import RealmSwift
 
 class RecordsViewController: UITableViewController {
 
-    var detailViewController: CommentsViewController? = nil
+    var detailViewController: RegionsTableViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class RecordsViewController: UITableViewController {
         navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? CommentsViewController
+            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? RegionsTableViewController
         }
     }
 
@@ -48,7 +48,7 @@ class RecordsViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let realm = try! Realm()
                 let object = realm.objects(AppIdEntry.self)[indexPath.row]
-                let controller = (segue.destination as! UINavigationController).topViewController as! CommentsViewController
+                let controller = (segue.destination as! UINavigationController).topViewController as! RegionsTableViewController
                 controller.appIdEntry = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -94,7 +94,5 @@ class RecordsViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
 }
 

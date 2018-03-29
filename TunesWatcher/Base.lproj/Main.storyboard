@@ -27,6 +27,38 @@
             </objects>
             <point key="canvasLocation" x="-38" y="-630"/>
         </scene>
+        <!--Regions Table View Controller-->
+        <scene sceneID="2oV-Ov-6qd">
+            <objects>
+                <tableViewController id="jW6-8S-Qkc" customClass="RegionsTableViewController" customModule="TunesWatcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kRF-yV-7Br">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" id="23R-eJ-zmV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="23R-eJ-zmV" id="RK7-YL-3FG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fQD-0j-Y1s" kind="showDetail" identifier="ShowComments" id="qBr-i0-W4F"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jW6-8S-Qkc" id="Xwe-EY-uwa"/>
+                            <outlet property="delegate" destination="jW6-8S-Qkc" id="coK-67-qUu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Zqw-C5-vPZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAx-CG-oRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="127"/>
+        </scene>
         <!--Comments View Controller-->
         <scene sceneID="vOs-oh-YwJ">
             <objects>
@@ -87,7 +119,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2i-oX-ewa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.60000000000002" y="127.28635682158921"/>
+            <point key="canvasLocation" x="1393" y="128"/>
         </scene>
         <!--Enter AppstoreID View Controller-->
         <scene sceneID="S5L-GA-B4T">
@@ -189,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fQD-0j-Y1s" kind="relationship" relationship="rootViewController" id="ify-Vx-8gQ"/>
+                        <segue destination="jW6-8S-Qkc" kind="relationship" relationship="rootViewController" id="sz9-ku-FfM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>

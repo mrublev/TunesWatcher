@@ -145,7 +145,7 @@ class CommentsViewController: UITableViewController {
         cell.ratingLabel.text = object.userVisibleRating()
         cell.titleLabel.text = object.title
         cell.descriptionLabel.text = object.content
-        cell.orderLabel.text = String(indexPath.row)
+        cell.orderLabel.text = String(indexPath.row + 1)
 
         return cell
     }

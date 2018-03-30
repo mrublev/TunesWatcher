@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0320628D206E40E300309ED5 /* FeedAppOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320628C206E40E300309ED5 /* FeedAppOwner.swift */; };
 		0332E54B206CD05900998B97 /* FeedComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54A206CD05900998B97 /* FeedComment.swift */; };
 		0332E54D206CD17A00998B97 /* AppIdEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54C206CD17A00998B97 /* AppIdEntry.swift */; };
 		0332E550206CE1A200998B97 /* EnterAppstoreIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */; };
@@ -16,7 +17,6 @@
 		0332E559206D10C700998B97 /* RegionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E558206D10C700998B97 /* RegionsTableViewController.swift */; };
 		0332E55C206D128C00998B97 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 0332E55B206D128C00998B97 /* countries.json */; };
 		0332E55E206D135400998B97 /* CountryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E55D206D135400998B97 /* CountryRecord.swift */; };
-		0332E560206D22D900998B97 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0332E55F206D22D900998B97 /* Info.plist */; };
 		03B9ABE6206CCA150077DE8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9ABE5206CCA150077DE8C /* AppDelegate.swift */; };
 		03B9ABED206CCA150077DE8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9ABEB206CCA150077DE8C /* Main.storyboard */; };
 		03B9ABEF206CCA150077DE8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B9ABEE206CCA150077DE8C /* Assets.xcassets */; };
@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0320628C206E40E300309ED5 /* FeedAppOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAppOwner.swift; sourceTree = "<group>"; };
 		0332E54A206CD05900998B97 /* FeedComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedComment.swift; sourceTree = "<group>"; };
 		0332E54C206CD17A00998B97 /* AppIdEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIdEntry.swift; sourceTree = "<group>"; };
 		0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAppstoreIDViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				0332E54A206CD05900998B97 /* FeedComment.swift */,
+				0320628C206E40E300309ED5 /* FeedAppOwner.swift */,
 				0332E54C206CD17A00998B97 /* AppIdEntry.swift */,
 				0332E55D206D135400998B97 /* CountryRecord.swift */,
 			);
@@ -175,7 +177,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Michael Rublev";
 				TargetAttributes = {
 					03B9ABE1206CCA150077DE8C = {
@@ -210,7 +212,6 @@
 				03B9ABF2206CCA150077DE8C /* LaunchScreen.storyboard in Resources */,
 				03B9ABEF206CCA150077DE8C /* Assets.xcassets in Resources */,
 				0332E55C206D128C00998B97 /* countries.json in Resources */,
-				0332E560206D22D900998B97 /* Info.plist in Resources */,
 				03B9ABED206CCA150077DE8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +284,7 @@
 				0332E54D206CD17A00998B97 /* AppIdEntry.swift in Sources */,
 				0332E552206CEF1000998B97 /* RecordsViewController.swift in Sources */,
 				0332E559206D10C700998B97 /* RegionsTableViewController.swift in Sources */,
+				0320628D206E40E300309ED5 /* FeedAppOwner.swift in Sources */,
 				0332E54B206CD05900998B97 /* FeedComment.swift in Sources */,
 				0332E554206CF3B900998B97 /* CommentsViewController.swift in Sources */,
 				0332E55E206D135400998B97 /* CountryRecord.swift in Sources */,
@@ -328,6 +330,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -335,6 +338,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -385,6 +389,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -392,6 +397,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

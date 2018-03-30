@@ -14,4 +14,14 @@ class FeedComment : Object {
     @objc dynamic var title: String = ""
     @objc dynamic var content: String = ""
     @objc dynamic var rating: String = ""
+    
+    func userVisibleRating() -> String {
+        var returnValue = ""
+        if let number = Int(rating) {
+            for _ in 0..<number {
+                returnValue += "⭐️"
+            }
+        }
+        return returnValue
+    }
 }

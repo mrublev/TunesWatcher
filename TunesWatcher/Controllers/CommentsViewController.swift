@@ -15,6 +15,13 @@ class CommentsViewController: UITableViewController {
     let URLTemplate = "https://itunes.apple.com/<REGION>/rss/customerreviews/id=<APP_ID>/sortBy=mostRecent/json"
     var requestURL: URL?
     var objects: [FeedComment]?
+    var appOnwer: FeedAppOwner? {
+        didSet {
+            if let name = appOnwer?.applicationName {
+                navigationItem.title = name
+            }
+        }
+    }
     
     var appIdEntry: AppIdEntry?
     var regionShort: String?
@@ -26,22 +33,38 @@ class CommentsViewController: UITableViewController {
         }
         return nil
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        objects = [FeedComment]()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Load More", style: .done, target: self, action: #selector(loadMore))
+    }
+    
+    @objc func loadMore() {
+        if let url = requestURL {
+            makeRequest(url)
+        }
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let url = getApplicationURL() {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            
-            Alamofire.request(url).responseJSON { response in
-                if let json = response.result.value {
-                    self.processJson(json as! [String: Any])
-                }
-                
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                
-                self.tableView.reloadData()
+            makeRequest(url)
+        }
+    }
+    
+    func makeRequest(_ url: URL) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        Alamofire.request(url).responseJSON { response in
+            if let json = response.result.value {
+                self.processJson(json as! [String: Any])
             }
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            self.tableView.reloadData()
         }
     }
     
@@ -53,9 +76,29 @@ class CommentsViewController: UITableViewController {
                 commentEntries.forEach({ (entry: [String: Any]) in
                     if entry["author"] != nil {
                         allComments.append(commentForEntry(entry))
+                    } else if entry["im:artist"] != nil {
+                        appOnwer = appAuthorForEntry(entry)
                     }
                 })
-                objects = allComments
+                objects?.append(contentsOf:allComments)
+            }
+            
+            if let linksEntries = feedUnwrap["link"] as? [[String: Any]] {
+                linksEntries.forEach { ( link: [String: Any]) in
+                    if let attrDict = link["attributes"] as? [String: Any], let rel = attrDict["rel"] as? String {
+                        if rel == "next" {
+                            if var urlString = attrDict["href"] as? String {
+                                urlString = urlString.replacingOccurrences(of: "xml", with: "json")
+                                if let url = URL(string: urlString) {
+                                    requestURL = url
+                                    navigationItem.rightBarButtonItem?.isEnabled = true
+                                } else {
+                                    navigationItem.rightBarButtonItem?.isEnabled = false
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -77,6 +120,14 @@ class CommentsViewController: UITableViewController {
         return comment
     }
     
+    func appAuthorForEntry(_ entry: [String: Any]) -> FeedAppOwner {
+        let owner = FeedAppOwner()
+        if let nameDict = entry["im:name"] as? [String: Any], let label = nameDict["label"] as? String {
+            owner.applicationName = label
+        }
+        return owner
+    }
+    
     // MARK: - Table View
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,9 +142,10 @@ class CommentsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentTableViewCell
         let object = objects![indexPath.row]
         
-        cell.ratingLabel.text = object.rating
+        cell.ratingLabel.text = object.userVisibleRating()
         cell.titleLabel.text = object.title
         cell.descriptionLabel.text = object.content
+        cell.orderLabel.text = String(indexPath.row)
 
         return cell
     }

@@ -17,6 +17,7 @@ class RecordsViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.title = "Your watch list"
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openAddNewApplicationVC))
         navigationItem.rightBarButtonItem = addButton

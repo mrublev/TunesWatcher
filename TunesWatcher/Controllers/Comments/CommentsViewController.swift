@@ -19,6 +19,12 @@ class CommentsViewController: UITableViewController {
         didSet {
             if let name = appOnwer?.applicationName {
                 navigationItem.title = name
+                
+                if let entry = appIdEntry, let realm = try? Realm() {
+                    try! realm.write {
+                        entry.applicationName = name
+                    }
+                }
             }
         }
     }

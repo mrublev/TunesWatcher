@@ -23,7 +23,7 @@ class RecordsViewController: UITableViewController {
         navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? RegionsTableViewController
+            detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? RegionsTableViewController
         }
     }
 
@@ -33,13 +33,16 @@ class RecordsViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @objc func openAddNewApplicationVC(_ sender: Any) {
-        performSegue(withIdentifier: "OpenAddApp", sender: sender)
+        let alert = UIAlertController.init(title: "Select option", message: "You can add application identifier manually or by searching in iTunes", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction.init(title: "Manually", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "ShowAddAppId", sender: sender)
+        }))
+        alert.addAction(UIAlertAction.init(title: "Search", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "ShowSearchApp", sender: sender)
+        }))
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Segues
@@ -59,10 +62,6 @@ class RecordsViewController: UITableViewController {
 
     // MARK: - Table View
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let realm = try! Realm();
         return realm.objects(AppIdEntry.self).count
@@ -74,7 +73,11 @@ class RecordsViewController: UITableViewController {
         let realm = try! Realm();
         
         let object = realm.objects(AppIdEntry.self)[indexPath.row]
-        cell.textLabel!.text = object.applicationId
+        if let name = object.applicationName {
+            cell.textLabel!.text = "\(name) (\(object.applicationId))"
+        } else {
+            cell.textLabel!.text = object.applicationId
+        }
         return cell
     }
 

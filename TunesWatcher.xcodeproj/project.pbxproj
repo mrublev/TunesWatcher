@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0320628D206E40E300309ED5 /* FeedAppOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320628C206E40E300309ED5 /* FeedAppOwner.swift */; };
+		03206292206E6F6C00309ED5 /* SearchAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03206291206E6F6C00309ED5 /* SearchAppTableViewController.swift */; };
+		03206294206FF50A00309ED5 /* SearchAppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03206293206FF50A00309ED5 /* SearchAppEntry.swift */; };
+		0320629B2070087300309ED5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0320629A2070087300309ED5 /* README.md */; };
 		0332E54B206CD05900998B97 /* FeedComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54A206CD05900998B97 /* FeedComment.swift */; };
 		0332E54D206CD17A00998B97 /* AppIdEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54C206CD17A00998B97 /* AppIdEntry.swift */; };
 		0332E550206CE1A200998B97 /* EnterAppstoreIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		0320628C206E40E300309ED5 /* FeedAppOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAppOwner.swift; sourceTree = "<group>"; };
+		03206291206E6F6C00309ED5 /* SearchAppTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppTableViewController.swift; sourceTree = "<group>"; };
+		03206293206FF50A00309ED5 /* SearchAppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppEntry.swift; sourceTree = "<group>"; };
+		0320629A2070087300309ED5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		0332E54A206CD05900998B97 /* FeedComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedComment.swift; sourceTree = "<group>"; };
 		0332E54C206CD17A00998B97 /* AppIdEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIdEntry.swift; sourceTree = "<group>"; };
 		0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAppstoreIDViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03206290206E6F5900309ED5 /* SearchApp */ = {
+			isa = PBXGroup;
+			children = (
+				03206291206E6F6C00309ED5 /* SearchAppTableViewController.swift */,
+			);
+			path = SearchApp;
+			sourceTree = "<group>";
+		};
+		03206296206FFD2000309ED5 /* AddApp */ = {
+			isa = PBXGroup;
+			children = (
+				0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */,
+			);
+			path = AddApp;
+			sourceTree = "<group>";
+		};
+		03206297206FFE3800309ED5 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				0332E555206CFF6600998B97 /* Cells */,
+				0332E553206CF3B900998B97 /* CommentsViewController.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		03206298206FFE3800309ED5 /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				0332E558206D10C700998B97 /* RegionsTableViewController.swift */,
+			);
+			path = Regions;
+			sourceTree = "<group>";
+		};
+		03206299206FFE3800309ED5 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				0332E551206CEF1000998B97 /* RecordsViewController.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
 		0332E549206CCF3800998B97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +112,7 @@
 				0320628C206E40E300309ED5 /* FeedAppOwner.swift */,
 				0332E54C206CD17A00998B97 /* AppIdEntry.swift */,
 				0332E55D206D135400998B97 /* CountryRecord.swift */,
+				03206293206FF50A00309ED5 /* SearchAppEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -72,10 +120,11 @@
 		0332E54E206CE14800998B97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0332E54F206CE1A200998B97 /* EnterAppstoreIDViewController.swift */,
-				0332E551206CEF1000998B97 /* RecordsViewController.swift */,
-				0332E558206D10C700998B97 /* RegionsTableViewController.swift */,
-				0332E553206CF3B900998B97 /* CommentsViewController.swift */,
+				03206290206E6F5900309ED5 /* SearchApp */,
+				03206296206FFD2000309ED5 /* AddApp */,
+				03206299206FFE3800309ED5 /* Records */,
+				03206298206FFE3800309ED5 /* Regions */,
+				03206297206FFE3800309ED5 /* Comments */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,9 +169,9 @@
 		03B9ABE4206CCA150077DE8C /* TunesWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				0320629A2070087300309ED5 /* README.md */,
 				0332E549206CCF3800998B97 /* Models */,
 				0332E54E206CE14800998B97 /* Controllers */,
-				0332E555206CFF6600998B97 /* Cells */,
 				03B9ABE5206CCA150077DE8C /* AppDelegate.swift */,
 				03B9ABEB206CCA150077DE8C /* Main.storyboard */,
 				0332E55A206D118F00998B97 /* Support Files */,
@@ -211,6 +260,7 @@
 			files = (
 				03B9ABF2206CCA150077DE8C /* LaunchScreen.storyboard in Resources */,
 				03B9ABEF206CCA150077DE8C /* Assets.xcassets in Resources */,
+				0320629B2070087300309ED5 /* README.md in Resources */,
 				0332E55C206D128C00998B97 /* countries.json in Resources */,
 				03B9ABED206CCA150077DE8C /* Main.storyboard in Resources */,
 			);
@@ -281,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03206294206FF50A00309ED5 /* SearchAppEntry.swift in Sources */,
 				0332E54D206CD17A00998B97 /* AppIdEntry.swift in Sources */,
 				0332E552206CEF1000998B97 /* RecordsViewController.swift in Sources */,
 				0332E559206D10C700998B97 /* RegionsTableViewController.swift in Sources */,
@@ -290,6 +341,7 @@
 				0332E55E206D135400998B97 /* CountryRecord.swift in Sources */,
 				0332E557206CFF8F00998B97 /* CommentTableViewCell.swift in Sources */,
 				0332E550206CE1A200998B97 /* EnterAppstoreIDViewController.swift in Sources */,
+				03206292206E6F6C00309ED5 /* SearchAppTableViewController.swift in Sources */,
 				03B9ABE6206CCA150077DE8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

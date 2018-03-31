@@ -11,4 +11,6 @@ import RealmSwift
 
 class AppIdEntry: Object {
     @objc dynamic var applicationId: String = ""
+    @objc dynamic var applicationName: String?
+    @objc dynamic var applicationUrlString: String?
 }
